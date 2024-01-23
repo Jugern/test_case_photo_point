@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}TEST CASE PHOTO POINT {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% block CssJs %}
+    {% endblock %}
+</head>
+<body>
+<div class="m-auto text-dark">
+    <p class="fs-3 m-3">TEST CASE PHOTO POINT</p>
+    <div class="m-3">
+        {% block body %}
+            Предлагаем вам создать "голый" джанго проект, который по переходу на страницу
+            <a href="/get-current-usd">/get-current-usd/</a>
+            бужет отображать в json формате актуальный курс доллара к рублю (запрос по апи, найти самостоятельно) и
+            показывать 10 последних запросов (паузу между запросами курсов должна быть не менее 10 секунд)
+        {% endblock %}
+    </div>
+</div>
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
+</body>
+
+
+</html>

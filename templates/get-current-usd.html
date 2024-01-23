@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block CssJs %}
+    <script src="{% static 'custom/js/usd-rub.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div>Информация по курсу рубля. Данные с сайта tinkoff.ru</div>
+    <ul class="list-group" id="list-usd-rub">
+    </ul>
+{% endblock %}
